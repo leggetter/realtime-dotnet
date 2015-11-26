@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real-time Web Apps & .NET. What are your options?</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="./bower_components/pusher-remark-themes/theme.css" />
+    <style type="text/css">
+    .left-code-col {
+      width: 80%;
+      float: left;
+      clear: left;
+    }
+
+    .right-example-col,
+    .single-right-example-col {
+      width: 20%;
+      float: left;
+      clear: right;
+      text-align: center;
+    }
+
+    .right-example-col:before {    /* create a full-height inline block pseudo=element */
+      content: ' ';
+      display: inline-block;
+      vertical-align: middle;  /* vertical alignment of the inline element */
+      height: 100%;
+    }
+    .right-example-col > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Two-column layout */
+    .left-column,
+    .left-column-2,
+    .left-column-3,
+    .left-column-4,
+    .left-column-5 {
+      color: #777;
+      width: 40%;
+      float: left;
+      clear: left;
+    }
+    .right-column,
+    .right-column-2,
+    .right-column-3,
+    .right-column-4,
+    .right-column-5 {
+      width: 60%;
+      float: right;
+      padding-top: 1em;
+      clear: right;
+    }
+    .footer {
+      padding-top: 1em;
+      width: 100%;
+      clear: both;
+    }
+
+    .remark-slide-number {
+      bottom: 12px;
+      opacity: 0.5;
+      position: absolute;
+      right: 20px;
+      font-size: 20px;
+    }
+
+    small {
+      font-size: 14px;
+    }
+    
+    .fixed-ul ul {
+      width: 100%;
+    }
+    
+    .unstyled-links a,
+    .unstyled-links a:visited {
+      text-decoration: none;
+    }
+    
+    .bg-fade {
+      background-blend-mode: soft-light;
+    }
+    
+    .fixed-width-list ul,
+    .fixed-width-list ol {
+      width: 650px;
+    }
+    
+    .bottom-left-h h1,
+    .bottom-left-h h2,
+    .bottom-left-h h3 {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      overflow: auto;
+    }
+    
+    .bg-right {
+      background-position: right !important;
+    }
+    
+    .bg-bottom {
+      background-position: bottom !important;
+      background-size: 60% !important;
+    }
+    
+    .h-abs-top h1,
+    .h-abs-top h2 {
+      position: absolute;
+      top: 1%;
+    }
+    
+    .full-video video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    
+    .full-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    
+    .h-non-block h1,
+    .h-non-block h2 {
+      display: inline-block;
+    }
+    
+    .col-3rd {
+      width: 30%;
+      float: left;
+    }
+    
+    #twitter_id {
+      position: fixed;
+      bottom: 2.2%;
+      left: 2%;
+      font-size: 1.2em;
+      color: white;
+      z-index: 100000;
+    }
+    
+    .padding-center-fix {
+      padding-top: 21%;
+    }
+    
+    .twitter_id {
+      position: fixed;
+      bottom: 7%;
+      right: 20px;
+      font-size: 0.6em;
+      color: white;
+      z-index: 100000;
+    }
+    
+    .twitter-id-left .twitter_id {
+      left: 20px;
+    }
+    
+    .no-overlay .twitter_id,
+    .no-overlay .remark-slide-number {
+      display: none;
+    }
+    
+    /* Add to themes.css */
+    
+    .remark-slide ul, 
+    .remark-slide ol {
+      text-align: left;
+    }
+    
+    .fixed-width-list > ul,
+    .fixed-width-list > ol {
+      width: 650px;
+      display: inline-block;
+    }
+    
+    .bg-dark-blue {
+      background-color: #27343d !important;
+    }
+    
+    .remark-code {
+      line-height: 22px;
+    }
+    
+    .long .remark-code {
+      padding-top: 0.1em;
+      padding-bottom: 0.1em;
+    }
+    
+    .larger-code .remark-code {
+      line-height: 24px;
+      font-size: 22px;
+    }
+    
+    .remark-slide .bottom h3 {
+      bottom: -5%;
+    }
+    
+    .img-contain img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    </style>
+  </head>
+  <body>
+
+    <script src="bower_components/remark/out/remark.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+        sourceUrl: 'slides.md',
+        highlightLanguage: 'remark',
+        navigation: {
+          scroll: false
+        },
+        ratio: "16:9"
+      });
+    </script>
+
+  </body>
+</html>
