@@ -6,15 +6,6 @@ layout: true
 
 ---
 
-name: pink
-layout: true
-
-class: bg-pink, center, middle
-
-<span class="twitter_id">@leggetter</span>
-
----
-
 name: green
 class: green-template, center, middle
 layout: true
@@ -31,9 +22,17 @@ class: bg-light, center, middle
 
 ---
 
+name: black
+layout: true
+class: bg-black, center, middle
+
+<span class="twitter_id">@leggetter</span>
+
+---
+
 name: white
 layout: true
-class: bg-white, center, middle, black-text
+class: bg-white, center, middle, white-text
 
 <span class="twitter_id">@leggetter</span>
 
@@ -47,14 +46,22 @@ class: title
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Developer Relations</span>
-* <span class="speaker-pusher-logo"></span>
+* <span class="speaker-nexmo-logo"></span>
 
 ???
 
+* Real-time since 2001
+* SDKs
+* Apps
+* Evangelism
+
 ---
 
+template: white
 class: bg-contain
-background-image: url(./img/pusher-white-cloud.png)
+background-image: url(./img/nexmo/what-nexmo-offers.png)
+
+???
 
 ---
 
@@ -63,10 +70,252 @@ class: fixed-width-list
 ## What we'll cover
 
 1. Why Real-Time?
-2. What are your options
+2. Common Real-Time Use Cases
+3. What are your options
   * How do you choose?
   * Pros & Cons
-3. Example Solutions for .NET
+4. Example Solutions for .NET
+
+---
+
+template: dblue
+
+# When do we need Realtime?
+
+---
+
+class: bg-cover trans-h
+background-image: url(./img/warp-core.gif)
+
+## WCaaS
+
+--
+
+### Data: Is there a timely nature to the data?
+
+???
+- Is there a value or need to get the data quickly?
+- Firm or Soft deadline
+- Maintain Context ??
+
+---
+
+class: bg-cover trans-h top
+background-image: url(./img/game-latency.gif)
+
+--
+
+### User Experience: Is there a timely nature to the experience?
+
+???
+- Anything with human-to-human interaction
+- Some interactions with systems
+- Frustration at high latency on a voice call
+
+---
+
+class: fixed-width-list
+
+## Realtime is required when there's a *Need* or *Demand* for:
+
+* Up to date information
+* Interaction to maintain engagement (UX)
+
+---
+
+class: top
+
+<br /><br />
+
+# These aren't new *Needs* or *Demands*
+
+## But...
+
+--
+
+# The Internet
+
+???
+
+But we had a constraint... The Internet
+
+---
+
+## Internet
+
+> a global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.
+
+???
+
+* Beyond web pages and Browsers
+* Beyond just HTTP and hyperlinks
+* Companies like Nexmo bridge Internet and Telephony
+
+---
+
+background-image: url(img/internet.png)
+class: bg-contain
+
+???
+* long strived to build real-time Internet applications
+* Arrow -> Effort required to innovate
+
+---
+
+background-image: url(img/plato-talkomatic.png)
+class: bg-contain
+
+???
+Talkomatic realtime Chat - created back in 1973
+
+---
+
+background-image: url(img/internet-http.png)
+
+???
+
+---
+
+## HTTP was better. But many wanted more.
+
+---
+
+background-image: url(img/yahoo-chat.png)
+
+???
+Yahoo! Web chat. Looks like a Java Applet.
+
+---
+
+background-image:url(img/reuters-kobra.png)
+class: bg-contain
+
+???
+Financial Data. Also Java.
+
+---
+
+background-image: url(img/legacy-finance-web.gif)
+class: bg-contain
+
+---
+
+class: fixed-width-list top
+
+## HTTP + Browsers were restrictive
+
+* HTTP - request/response paradigm
+* Keeping persistent HTTP connections alive
+* No cross-browser `XMLHttpRequest`
+* 2 connection limit
+* No browser cross origin support
+* General cross browser incompatibilities
+--
+
+* So we **HACKED!** Java Applets, Flash, HTTP Hacks
+
+???
+
+With the browser ...
+Don't go into detail
+
+---
+
+template: dblue
+
+# Then Real-Time Went Mainstream
+
+???
+
+---
+
+background-image: url(img/follow-magnified.png)
+class: trans-h, top
+
+# Social
+
+???
+Social Demonstrated Value:
+- Twitter
+- Facebook
+- Skype
+- Other chat solutions
+
+- Demand and Need for update to date info
+- Demand and Need for interaction
+
+- The FOLLOW & FRIEND buttons - we know who's interested.
+
+---
+
+class: fixed-width-list
+
+## Technology Advancements
+
+* Memory & CPU speed and cost
+* The Cloud
+* Browser standardisation & enhancements
+* Any client can use the standards
+
+???
+
+---
+
+class: bg-contain
+background-image:url(img/internet-http-es-ws.png)
+
+???
+
+Close to innovation
+
+---
+
+## **MASSIVE** Increase in Internet Usage
+
+---
+
+class: unstyled-links top fixed-width-list
+
+## Internet Usage (per day)
+
+* **[200 billion emails][email-stat]**
+--
+
+* [7 million blog posts written][wordpress-stat]<sup>†</sup>
+* [500 million tweets][twitter-stat]
+* **[30 billion WhatsApp messages](http://www.techcityuk.com/blog/2015/10/startup-guide-to-cloud-communications/)**
+--
+
+* [55 million Facebook status updates][facebook-stat]
+* [5 billion Google+ +1's][googleplus-stat]
+* [60 million Instagram photos posted][instagram-stat]
+* [2 billion minutes spent on Skype][skype-stat]
+* [33 million hours of Netflix watched][netflix-stat]
+* **[750 million hours of YouTube watched][youtube-stat]**
+
+[email-stat]:http://www.radicati.com/wp/wp-content/uploads/2013/04/Email-Statistics-Report-2013-2017-Executive-Summary.pdf
+[twitter-stat]:http://abcnews.go.com/Business/twitter-ipo-filing-reveals-500-million-tweets-day/story?id=20460493
+[facebook-stat]:http://blog.kissmetrics.com/facebook-statistics/
+[googleplus-stat]:http://www.mediabistro.com/alltwitter/social-media-stats-2012_b30651
+[wordpress-stat]:http://wordpress.com/stats/posting/
+[instagram-stat]:http://instagram.com/press/
+[youtube-stat]:http://www.statisticbrain.com/youtube-statistics/
+[netflix-stat]:http://blog.netflix.com/2014/01/new-isp-performance-data-for-december.html
+[skype-stat]:http://blogs.skype.com/2013/04/03/thanks-for-making-skype-a-part-of-your-daily-lives-2-billion-minutes-a-day/
+
+???
+- What are the main (work safe) uses for the Internet each day?
+- † 41.5 million posts in April = 1.38 million per day. Assuming WordPress.com have 20% of the market; 1.38 * 5 = 6.9 million posts on all blogging platforms.
+- †† 3.25 billion hours each month
+
+---
+
+class: bg-white
+background-image: url(./img/time-on-internet.png)
+
+???
+
+Mary Meeker, Kliener Perkins, Internet Trends 2015
 
 ---
 
@@ -183,7 +432,7 @@ background-image: url(./img/lunar-landing.png)
 
 ---
 
-class: bg-pink, top
+class: top
 
 <img width="20%" src="./img/facebook.png" />
 <img width="20%" src="./img/uservoice.png" />
@@ -207,7 +456,7 @@ class: h1-big
 
 ---
 
-class: bg-pink, h1-big
+class: h1-big
 
 # 6 Factors to Consider
 
@@ -311,8 +560,6 @@ class: h1-big
 # 4. Application/Solution Functionality 
 
 ---
-
-class: bg-pink
 
 # Functionality, huh?!
 
@@ -560,7 +807,6 @@ class: h1-big
 
 ---
 
-template: pink
 class: fixed-width-list
 
 ## I wanna build a real-time .NET app
@@ -644,7 +890,9 @@ background-image: url(./img/realtime-web-stack-tight-integration-self-hosted-xso
 
 ---
 
-<iframe src="https://uffebjorklund.gitbooks.io/xsockets-net-5/content/controllers/communicationpatterns/communication_patterns.html" width="100%" height="100%"></iframe>
+## TODO: screenshot/gif of XSockets book
+
+<!-- <iframe src="https://uffebjorklund.gitbooks.io/xsockets-net-5/content/controllers/communicationpatterns/communication_patterns.html" width="100%" height="100%"></iframe> -->
 
 ---
 
@@ -761,7 +1009,7 @@ background-image: url(img/build-vs-buy.png)
 
 ## Build vs. Buy - Costs
 
-<a class="bg-pink" style="position: absolute; top: 2%;" href="https://baremetrics.com/calculator">baremetrics.com/calculator</a>
+<a style="position: absolute; top: 2%;" href="https://baremetrics.com/calculator">baremetrics.com/calculator</a>
 
 ---
 
@@ -778,8 +1026,6 @@ template: dblue
 6. Hosted v Self-Hosted (Build vs. Buy)
 
 ---
-
-class: bg-pink
 
 # You need Real-Time!
 

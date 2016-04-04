@@ -16,11 +16,11 @@
     "url": "git://github.com/pusher-growth/pusher-remark-themes.git"
   },
   "homepage": "https://github.com/pusher-growth/pusher-remark-themes",
-  "_release": "13b99d9e72",
+  "_release": "bb05d0bc96",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "13b99d9e726f0f9c10e59749adc6f757a646162f"
+    "commit": "bb05d0bc9670c082f370146c6958d1d0779aee8c"
   },
   "_source": "git://github.com/pusher-growth/pusher-remark-themes.git",
   "_target": "*",

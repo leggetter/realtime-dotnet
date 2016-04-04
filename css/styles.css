@@ -1,0 +1,44 @@
+.full-width {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.full-height {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+.first-slide {
+  background-color: #91C399 !important;
+}
+
+.vid-width-100 video {
+  width: 100% !important;
+}
+
+.remark-slide>.topish {
+  top: 20%;
+}
+
+.img-max-width-100 img {
+  max-width: 100%;
+}
+
+.bottom-left {
+  width: 20%;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.remark-slide .title .speaker-nexmo-logo {
+  background-image: url(../img/nexmo/nexmo_logo_white.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20%;
+  display: inline-block;
+  height: 80px;
+  width: 100%;
+}

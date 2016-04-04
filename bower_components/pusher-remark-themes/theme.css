@@ -172,13 +172,14 @@ h1, h2, h3, h4 {
   color: white;
 }
 
-.bg-pink {
-  background-color: #f4065f !important;
+.remark-slide-content.bg-pink {
+  background: #E9820D;
+  background-color: #E9820D;
   color: white !important;
 }
 
-.bg-pink a,
-.bg-pink a:visited  {
+.remark-slide-content.bg-pink a,
+.remark-slide-content.bg-pink a:visited  {
   color: white !important;
 }
 
@@ -229,7 +230,6 @@ h1, h2, h3, h4 {
 .remark-slide ul, 
 .remark-slide ol {
   display: block;
-  text-align: left;
 }
 
 .remark-slide .block ul {
