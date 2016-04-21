@@ -699,7 +699,7 @@ background-image: url(./img/internet-http-es-ws-msg-pubsub.png)
 
 ---
 
-class: bg-cover
+class: bg-contain
 background-image: url(./img/twitter-notifications.gif)
 
 ???
@@ -734,6 +734,7 @@ client.subscribe('/leggetter-dm-notifications', function(data) {
   console.log(data.count);
 });
 ```
+--
 <hr />
 
 ```js
@@ -949,14 +950,12 @@ class: top code-reveal long wide larger-code
 
 ```js
 // client
-
-$.connection.hub.start(); // async
-
 var chat = $.connection.chatHub;
 ```
 --
 
 ```js
+
 chat.client.broadcastMessage = function (name, message) {
   // handle message
 };
@@ -964,14 +963,19 @@ chat.client.broadcastMessage = function (name, message) {
 --
 
 ```js
+
 chat.server.send( 'me', 'hello world' );
+```
+--
+```js
+
+$.connection.hub.start(); // async
 ```
 --
 <hr />
 
 ```csharp
 // server
-
 public class ChatHub : Hub
 {
 ```
@@ -989,6 +993,11 @@ public class ChatHub : Hub
   }
 }
 ```
+
+---
+
+class: bg-contain
+background-image: url(./img/internet-http-es-ws-msg-pubsub-rmi-ds.png)
 
 ---
 
@@ -1022,11 +1031,6 @@ background-image: url(./img/rtw-tech-decision-matrix-solutions-v2.png)
 
 ---
 
-class: bg-contain
-background-image: url(./img/internet-http-es-ws-msg-pubsub-rmi-ds.png)
-
----
-
 template: dblue
 class: h1-big
 
@@ -1034,12 +1038,10 @@ class: h1-big
 
 ---
 
-class: fixed-width-list
+# Code
 
-## Considerations
-
-* Self-hosted vs. Hosted
-* New app vs. Existing app
+* https://github.com/leggetter/realtime-dotnet-examples
+* Short link: http://j.mp/rt-dotnet-ex
 
 ---
 
@@ -1068,7 +1070,9 @@ class: fixed-width-list
 
 * On my radar
 * Are there more?
-* I'll cover these
+* XSockets
+  * Uffe Björklund
+  * Magnus Thor
 
 ---
 
@@ -1092,7 +1096,7 @@ background-image: url(./img/realtime-web-stack-tight-integration-self-hosted-sig
 * `Controllers\HomeController.cs`
 * `Hubs\ChatHub.cs`
 * `Views\Home\SignalR.cshtml`
-* `Script\chat\SignalRChat.cs`
+* `Script\chat\SignalRChat.js`
 
 ---
 
@@ -1133,11 +1137,11 @@ background-image: url(./img/realtime-web-stack-tight-integration-self-hosted-xso
 ## What we'll look at:
 
 * `References\XSockets.*`
-* `Scripts\XSockets.latest.js`
 * `App_Start\XSocketsStartup.cs`
 * `Controllers\HomeController.cs`
 * `XSockets\ChatController.cs`
 * `Views\Home\XSockets.cshtml`
+* `Scripts\XSockets.latest.js`
 * `Script\chat\XSocketsChat.cs`
 
 ---
@@ -1150,7 +1154,7 @@ background-image: url(./img/realtime-web-stack-tight-integration-self-hosted-xso
 * .NET
 * Simple integration
 * Communication patterns
-  * PubSub
+  * PubSub/Evented
   * RMI
 * *Licensed*
 ]
@@ -1208,13 +1212,13 @@ background-image: url(./img/realtime-web-stack-integration-self-hosted-msgq-faye
 
 --
 
-### Self-Hosted Demo 3: ASP.NET + Faye<br /><small>(Loosely Coupled)
+### Self-Hosted: ASP.NET + Faye<br /><small>(Loosely Coupled)
 
 ---
 
 class: wide
 
-## Self-Hosted Demo 3: Pros & Cons
+## Self-Hosted + Faye: Pros & Cons
 
 .left[
 **Pros**
@@ -1244,34 +1248,9 @@ class: fixed-width-list
 * [PubNub](https://pubnub.com)
 * [Pusher](https://pusher.com)
 * [Realtime.co](https://realtime.co)
-* Syncano
+* [Syncano](https://www.syncano.io/)
 
 ???
-
----
-
-class: top
-
-# Why use a hosted service?
-
-Scenario
-
-1. Site average of 10,000 Users
---
-
-2. Over 1 Hour, no polling
---
-
-3. Requests from pages load + HTML, CSS, JS, Images for 10k users = 50,000
---
-
-4. That's it! Total: 50,000
---
-
-
-Your servers handle **50k requests per hour instead of 3.6M**
-
-You offload the polling or persistent connections to the service
 
 ---
 
@@ -1326,6 +1305,31 @@ background-image: url(./img/realtime-web-stack-integration-hosted-pusher.png)
   * Natural loose coupling via an API
 * Where is your value?
   * Features v Infrastructure
+  
+---
+
+class: top
+
+# Why use a hosted service?
+
+Scenario
+
+1. Site average of 10,000 Users
+--
+
+2. Over 1 Hour, no polling
+--
+
+3. Requests from pages load + HTML, CSS, JS, Images for 10k users = 50,000
+--
+
+4. That's it! Total: 50,000
+--
+
+
+Your servers handle **50k requests per hour instead of 3.6M**
+
+You offload the polling or persistent connections to the service
 
 ---
 
@@ -1355,7 +1359,7 @@ template: dblue
 2. Use an Existing Solution
 3. Use a language you're comfortable with
 4. Do you need native mobile support?
-5. onMessage, PubSub (Evented), RMI or DataSync
+5. Simple Messaging, PubSub/Evented, RMI or DataSync
 6. Architectural considerations
 7. Hosted v Self-Hosted (Build vs. Buy)
 
@@ -1633,8 +1637,9 @@ class: fixed-width-list
 # Resources
 
 * [Real-time Tech Guide](http://j.mp/realtime-tech-guide)
-* [github.com/leggetter/realtime-dotnet-examples](https://github.com/leggetter/realtime-symfony-examples)
-* [Pusher](https://pusher.com)
+* [github.com/leggetter/realtime-dotnet-examples](https://github.com/leggetter/realtime-dotnet-examples)
+* [Tools, Tips and Techniques for Developing Real-time Apps](https://www.youtube.com/watch?v=KPEcK4zFuyw)
+* [Nexmo](https://www.nexmo.com)
 
 ---
 
