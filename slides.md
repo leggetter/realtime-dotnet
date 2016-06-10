@@ -37,10 +37,22 @@ class: bg-white, center, middle, white-text
 <span class="twitter_id">@leggetter</span>
 
 ---
+class: trans-h hide-twitter
 
-template: white
-class: hide-slide-numbers hide-twitter
-background-image: url(./img/devweek.png)
+<iframe src="http://poll.lab.io/ndc/results" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%"></iframe>
+<h3 style="font-size: 1.4em; position: fixed; left: 0; bottom: -7%; z-index: 10; color: white;"><span style="background-color: blue;">poll.lab.io/ndc</span> - Real-Time Web Apps & .NET. What are Your Options?</h4>
+
+---
+
+template: black
+class: hide-slide-numbers title
+
+# Real-Time Web Apps & .NET
+# What are Your Options?
+
+## <code>NDC { Oslo } 10-June-2016</code>
+
+???
 
 ---
 
@@ -49,6 +61,7 @@ class: title
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Developer Relations</span>
+* leggetter@nexmo.com
 * <span class="speaker-nexmo-logo"></span>
 
 ???
@@ -75,10 +88,10 @@ class: fixed-width-list
 1. Why Real-Time?
 2. Common Real-Time Use Cases
 3. What are your options?
-  * How do you choose?
+  * How do you choose? inc. Communication Patterns
   * .NET examples
   * Pros & Cons
-4. The Future of Real-Time
+4. Q&A
 
 ---
 
@@ -88,7 +101,7 @@ template: dblue
 
 ---
 
-class: bg-cover trans-h
+class: bg-cover trans-h top
 background-image: url(./img/warp-core.gif)
 
 ## WCaaS
@@ -127,202 +140,6 @@ class: fixed-width-list
 
 ---
 
-class: top
-
-<br /><br />
-
-# These aren't new *Needs* or *Demands*
-
-## But...
-
---
-
-# The Internet
-
-???
-
-But we had a constraint... The Internet
-
----
-
-## Internet
-
-> a global computer network providing a variety of information and communication facilities, consisting of interconnected networks using standardized communication protocols.
-
-???
-
-* Beyond web pages and Browsers
-* Beyond just HTTP and hyperlinks
-* Companies like Nexmo bridge Internet and Telephony
-
----
-
-background-image: url(img/internet.png)
-class: bg-contain
-
-???
-* long strived to build real-time Internet applications
-* Arrow -> Effort required to innovate
-
----
-
-background-image: url(img/plato-talkomatic.png)
-class: bg-contain
-
-???
-Talkomatic realtime Chat - created back in 1973
-
----
-
-background-image: url(img/internet-http.png)
-
-???
-
----
-
-## HTTP was better. But many wanted more.
-
----
-
-background-image: url(img/yahoo-chat.png)
-
-???
-Yahoo! Web chat. Looks like a Java Applet.
-
----
-
-background-image:url(img/reuters-kobra.png)
-class: bg-contain
-
-???
-Financial Data. Also Java.
-
----
-
-background-image: url(img/legacy-finance-web.gif)
-class: bg-contain
-
----
-
-class: fixed-width-list top
-
-## HTTP + Browsers were restrictive
-
-* HTTP - request/response paradigm
-* Keeping persistent HTTP connections alive
-* No cross-browser `XMLHttpRequest`
-* 2 connection limit
-* No browser cross origin support
-* General cross browser incompatibilities
---
-
-* So we **HACKED!** Java Applets, Flash, HTTP Hacks
-
-???
-
-With the browser ...
-Don't go into detail
-
----
-
-template: dblue
-
-# Then Real-Time Went Mainstream
-
-???
-
----
-
-background-image: url(img/follow-magnified.png)
-class: trans-h, top
-
-# Social
-
-???
-Social Demonstrated Value:
-- Twitter
-- Facebook
-- Skype
-- Other chat solutions
-
-- Demand and Need for update to date info
-- Demand and Need for interaction
-
-- The FOLLOW & FRIEND buttons - we know who's interested.
-
----
-
-class: fixed-width-list
-
-## Technology Advancements
-
-* Memory & CPU speed and cost
-* The Cloud
-* Browser standardisation & enhancements
-* Any client can use the standards
-
-???
-
----
-
-class: bg-contain
-background-image:url(img/internet-http-es-ws.png)
-
-???
-
-Close to innovation
-
----
-
-## **MASSIVE** Increase in Internet Usage
-
----
-
-class: unstyled-links top fixed-width-list
-
-## Internet Usage (per day)
-
-* **[200 billion emails][email-stat]**
---
-
-* [7 million blog posts written][wordpress-stat]<sup>†</sup>
-* [500 million tweets][twitter-stat]
-* **[30 billion WhatsApp messages](http://www.techcityuk.com/blog/2015/10/startup-guide-to-cloud-communications/)**
---
-
-* [55 million Facebook status updates][facebook-stat]
-* [5 billion Google+ +1's][googleplus-stat]
-* [60 million Instagram photos posted][instagram-stat]
-* [2 billion minutes spent on Skype][skype-stat]
-* [33 million hours of Netflix watched][netflix-stat]
-* **[750 million hours of YouTube watched][youtube-stat]**
-
-[email-stat]:http://www.radicati.com/wp/wp-content/uploads/2013/04/Email-Statistics-Report-2013-2017-Executive-Summary.pdf
-[twitter-stat]:http://abcnews.go.com/Business/twitter-ipo-filing-reveals-500-million-tweets-day/story?id=20460493
-[facebook-stat]:http://blog.kissmetrics.com/facebook-statistics/
-[googleplus-stat]:http://www.mediabistro.com/alltwitter/social-media-stats-2012_b30651
-[wordpress-stat]:http://wordpress.com/stats/posting/
-[instagram-stat]:http://instagram.com/press/
-[youtube-stat]:http://www.statisticbrain.com/youtube-statistics/
-[netflix-stat]:http://blog.netflix.com/2014/01/new-isp-performance-data-for-december.html
-[skype-stat]:http://blogs.skype.com/2013/04/03/thanks-for-making-skype-a-part-of-your-daily-lives-2-billion-minutes-a-day/
-
-???
-- What are the main (work safe) uses for the Internet each day?
-- † 41.5 million posts in April = 1.38 million per day. Assuming WordPress.com have 20% of the market; 1.38 * 5 = 6.9 million posts on all blogging platforms.
-- †† 3.25 billion hours each month
-
----
-
-class: bg-white
-background-image: url(./img/time-on-internet.png)
-
-???
-
-Mary Meeker, Kliener Perkins, Internet Trends 2015
-
----
-
 template: dblue
 class: bg-dark-blue, h1-big
 
@@ -334,7 +151,7 @@ class: bg-dark-blue, h1-big
 
 ---
 
-class: em-text, bg-cover, trans-h, bottom
+class: em-text, bg-contain, trans-h, bottom
 background-image: url(./img/twitter-notifications.gif)
 
 # Notifications & Activity Streams
@@ -364,11 +181,14 @@ background-image: url(./img/lequipe-football.png)
 
 class: bg-video, trans-h, em-text, bottom
 
-# Chat
+# Chat & Bots
 
 <video id="video" autoplay="true" loop="true">
-  <source src="./img/pie.mp4" type="video/mp4">
+  <source src="./video/tauth_demo.mp4" type="video/mp4">
 </video>
+
+--
+play_video:
 
 ???
 
@@ -427,6 +247,18 @@ class: top
 
 ---
 
+class: fixed-width-list
+
+## You All Have Real-Time Data in Your Apps
+
+## Every Single **Event**
+
+* Data Changes
+* System Interactions
+* User Interactions
+
+---
+
 template: dblue
 class: h1-big
 
@@ -440,7 +272,9 @@ class: h1-big
 
 ---
 
-template: dblue
+template: black
+background-image: url(./img/ndcoslo-2016-polling.jpg)
+class: trans-h top
 
 # 1. Should you keep on polling?
 
@@ -560,15 +394,18 @@ template: dblue
 class: h1-big, trans-h, bg-contain
 background-image: url(./img/windows-apple-android.jpg)
 
-# 4. Mobile Friendly?
+# 4. Client Device Support?
 
 ---
 
 class: top fixed-width-list
 
-## Mobile Friendly
+## Client Device Support
 
-* Only some have mobile libraries
+* Only some have a selection of client libraries
+--
+
+* Supported connection transports
 --
 
 * How much data are you sending?
@@ -813,12 +650,12 @@ updates.emit('deleted', {id: 1});
 ---
 
 class: bg-contain
-background-image: url(./img/slack-ui.png)
+background-image: url(./img/slack-sections.png)
 
 ---
 
 class: bg-contain
-background-image: url(./img/slack-ui-channels.png)
+background-image: url(./img/slack-sections-outlined.png)
 
 ---
 
@@ -1090,7 +927,7 @@ background-image: url(./img/realtime-web-stack-tight-integration-self-hosted-sig
 
 ## What we'll look at:
 
-* `References\Microsoft.AspNet.SignalR.*`
+* `PM> Install-Package Microsoft.AspNet.SignalR`
 * `Scripts\jquery.signalR*.js`
 * `App_Start\SignalRStartup.cs`
 * `Controllers\HomeController.cs`
@@ -1136,7 +973,7 @@ background-image: url(./img/realtime-web-stack-tight-integration-self-hosted-xso
 
 ## What we'll look at:
 
-* `References\XSockets.*`
+* `PM> Install-Package XSockets`
 * `App_Start\XSocketsStartup.cs`
 * `Controllers\HomeController.cs`
 * `XSockets\ChatController.cs`
@@ -1207,34 +1044,10 @@ class: img-contain top
 ---
 
 template: green
-class: bottom, trans-h demo-splash
+class: trans-h bottom
 background-image: url(./img/realtime-web-stack-integration-self-hosted-msgq-faye.png)
 
---
-
-### Self-Hosted: ASP.NET + Faye<br /><small>(Loosely Coupled)
-
----
-
-class: wide
-
-## Self-Hosted + Faye: Pros & Cons
-
-.left[
-**Pros**
-
-* PubSub
-* Connection fallback
-* Redis Queue support
-* Simple integration
-]
-
-.right[
-**Cons**
-
-* Not .NET(?)
-* You need to scale
-]
+## If SignalR or XSockets aren't a good fit<br />you may have to look at a non-.NET solution
 
 ---
 
@@ -1256,21 +1069,21 @@ class: fixed-width-list
 
 template: green
 class: bottom, trans-h
-background-image: url(./img/realtime-web-stack-integration-hosted-pusher.png)
+background-image: url(./img/realtime-web-stack-integration-hosted-pubnub.png)
 
 --
 
-### Hosted Demo: Pusher
+### Hosted Demo: PubNub
 
 ---
 
 ## What we'll look at:
 
-* `References\PusherServer`
-* `Controllers\HomeController.cs`
-* `Views\Home\Pusher.cshtml`
-* `Script\chat\PusherChat.js`
-* [Pusher Debug Console](https://dashboard.pusher.com/apps/97748/console)
+* `PM> Install-Package Pubnub`
+* `Controllers\ChatController.cs`
+* `Views\Home\PubNub.cshtml`
+* `Script\chat\PubNub.js`
+* [PubNub Real-Time Analytics](https://admin.pubnub.com/#/user/213808/account/213808/app/307107/key/192918/analytics)
 
 ---
 
@@ -1358,16 +1171,50 @@ template: dblue
 1. Should you keep on polling?
 2. Use an Existing Solution
 3. Use a language you're comfortable with
-4. Do you need native mobile support?
+4. Do you need multiple client device support?
 5. Simple Messaging, PubSub/Evented, RMI or DataSync
 6. Architectural considerations
 7. Hosted v Self-Hosted (Build vs. Buy)
 
 ---
 
+# You need Real-Time!
+
+## There are lots of options.
+
+## Make the choice that's right for you.
+
+## I hope this helps!
+
+---
+
+class: fixed-width-list
+
+# Resources
+
+* [Real-time Tech Guide](http://j.mp/realtime-tech-guide)
+* [github.com/leggetter/realtime-dotnet-examples](https://github.com/leggetter/realtime-dotnet-examples)
+* [Tools, Tips and Techniques for Developing Real-time Apps](https://www.youtube.com/watch?v=KPEcK4zFuyw)
+* [Nexmo](https://www.nexmo.com)
+
+---
+
+template: dblue
+class: title
+
+## Real-time Web Apps & .NET</br>What are your options?
+
+### Questions?
+
+* <span class="speaker">Phil @leggetter</span>
+* <span class="speaker-job-title">Head of Developer Relations</span>
+* <span class="speaker-nexmo-logo"></span>
+
+---
+
 template: dblue
 
-# Future
+# Future (If Time)
 
 ---
 
@@ -1619,37 +1466,3 @@ class: full-video
 - We confine ourselves to thinking in the singular.
 - What if we think in multiples?
 - What sort of experiences and uses would that result in?
-
----
-
-# You need Real-Time!
-
-## There are lots of options.
-
-## Make the choice that's right for you.
-
-## I hope this helps!
-
----
-
-class: fixed-width-list
-
-# Resources
-
-* [Real-time Tech Guide](http://j.mp/realtime-tech-guide)
-* [github.com/leggetter/realtime-dotnet-examples](https://github.com/leggetter/realtime-dotnet-examples)
-* [Tools, Tips and Techniques for Developing Real-time Apps](https://www.youtube.com/watch?v=KPEcK4zFuyw)
-* [Nexmo](https://www.nexmo.com)
-
----
-
-template: dblue
-class: title
-
-## Real-time Web Apps & .NET</br>What are your options?
-
-### Questions?
-
-* <span class="speaker">Phil @leggetter</span>
-* <span class="speaker-job-title">Head of Developer Relations</span>
-* <span class="speaker-nexmo-logo"></span>

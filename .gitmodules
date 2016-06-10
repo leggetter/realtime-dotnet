@@ -1,6 +1,0 @@
-[submodule "devweek-2016"]
-	path = devweek-2016
-	url = https://github.com/leggetter/realtime-dotnet.git
-[submodule "devtalks-cluj-2016"]
-	path = devtalks-cluj-2016
-	url = https://github.com/leggetter/realtime-dotnet.git
