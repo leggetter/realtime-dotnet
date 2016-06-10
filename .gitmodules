@@ -4,3 +4,6 @@
 [submodule "devtalks-cluj-2016"]
 	path = devtalks-cluj-2016
 	url = https://github.com/leggetter/realtime-dotnet.git
+[submodule "ndcoslo-2016"]
+	path = ndcoslo-2016
+	url = https://github.com/leggetter/realtime-dotnet.git
